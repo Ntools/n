@@ -1,0 +1,68 @@
+# -------------------------------------------------
+#
+#     Makefile for HP-UX
+#
+# -------------------------------------------------
+CC = cc
+CFLAGS = -Aa -DUNIX
+# -DDBG
+LFLAGS = 
+EXEDIR = /usr/local/bin
+FILES= main.o xout.o display.o mem.o funckey.o \
+	function.o ismachin.o jmptbl.o key.o scan.o search.o \
+	strlib.o update.o sysV.o
+NEFILES= main vram display mem funckey function ismachin jmptbl \
+	key scan search strlib update sysV.o
+
+LIB = -lcurses
+
+OBJS= nd
+
+all:	$(OBJS) n
+
+install:	$(OBJS) n
+	cp $(OBJS) $(EXEDIR)
+	cp n $(EXEDIR)
+
+src:
+	lha e srced.lzh
+
+obj:
+	lha e pacobj.lzh
+
+clean:
+	lha u pacobj.lzh *.o nd n
+	lha u srced.lzh *.h *.c Makefile
+	rm *.o
+	rm *.bak
+
+del:
+	lha u srced.lzh *.h *.c Makefile
+	rm *.h
+	rm *.c
+	rm *.o
+	rm *.bak
+
+#n:	n.c
+#	$(CC) -o n n.c
+#	cp n ../../bin
+
+$(OBJS): $(FILES)
+	$(CC) -o $(OBJS) $(LFLAGS) $(FILES) $(LIB)
+#	cp $(OBJS) ../../bin
+
+main.o:	main.c ed.h Makefile
+display.o:	display.c ed.h
+funckey.o:	funckey.c ed.h
+function.o:	function.c ed.h
+ismachin.o:	ismachin.c
+jmptbl.o:	jmptbl.c ed.h
+key.o:		key.c ed.h
+mem.o:		mem.c ed.h
+update.o:	update.c ed.h
+scan.o:		scan.c ed.h
+search.o:	search.c ed.h
+strlib.o:	strlib.c
+sysV.o:		sysV.c 
+	$(CC) -Ac -c sysV.c
+xout.o:		xout.c

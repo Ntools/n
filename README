@@ -1,0 +1,8 @@
+Basic install:
+	wget http://ntools.net/arc/RPMS/ntools-1.0.1-3.noarch.rpm
+	rpm -ivh ntools-1.0.1-3.noarch.rpm
+	yum install eds
+
+tarball install:
+	make
+	sudo make install

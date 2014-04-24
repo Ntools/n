@@ -1,0 +1,67 @@
+KeyWord „Ÿ„Ÿ„Ÿ KeyCode „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ Function „Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ„Ÿ
+times		^U			Times
+meta		ESC			Extend 1
+extend		^X			Extend 2
+emacscdel	^H			Back Space
+insertmode	META ^I			Replace/Insert
+left		^B			Backward char
+right		^F			Forward char
+sdelete		DEL			Delete char
+macroexec	^L			Execute kbd macro
+macronum	EXTEND L		Set kbd macro buffer
+runshell	EXTEND !		Execute command
+home		META !			Set begining of view
+compile		META ESC		Compile
+macrostart	EXTEND (		Start kbd macro
+linsert		^J			New line
+macroend	EXTEND )		End kbd macro
+up		^P			Backward line
+down		^N			Next line
+ppage		^V			Scroll up
+mpage		META V			Scroll down
+linejmp		META J			Jump to line
+undo		EXTEND U		
+exit		^Z			Save & exit
+quit		EXTEND ^C		quit
+pword		META F			Forward word
+mword		META B			Backward word
+lword		META L			Change lower case.
+uword		META U			Change upper case.
+endline		^E			End of line
+begline		^A			Begining of line
+emacsnewl	^M			New line indent
+rightcut	^K			Kill line
+leftcut		^D			Delete to begining of line
+nexterr		EXTEND E		Display next error
+ldelete		^O			Delete line
+paste		^Y			Paste
+fileend		META >			End of buffer
+filetop		META <			begining of buffer
+psearch		^S			Forward search
+msearch		^R			Backward search
+qreplace	META R			Replace word
+killbuffer	EXTEND K		Kill buffer
+search		EXTEND I		Search word
+reflesh		EXTEND R		Read File
+redisplay	^Q			Refresh screen
+setfile		EXTEND V		Open File
+viewfile	EXTEND ^V		Open Read Only File
+save		EXTEND S		Save buffer
+save		EXTEND ^S		Save buffer
+help		META ?			Help
+writefile	EXTEND W		Save as ...
+fnamechage	META N			Change buffer name
+markset		EXTEND .		Mark set
+markset		META .			Mark set
+cut		^W			Kill region
+copy		META W			Copy region
+mark		EXTEND ^X		Exchange point to mark
+buffernum	EXTEND B		Switch to buffer
+nextbuf		EXTEND X		Next buffer
+setwindow	EXTEND 2		Sprit window
+setpara		META I			Search word of cursor point
+closewindow	EXTEND 1		Delete other window
+window		EXTEND N		Change window
+readonly	EXTEND P		Set Read only
+digit		EXTEND H		Inclimental Digit
+inputval	META H			Input Digit
